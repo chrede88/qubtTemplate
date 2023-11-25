@@ -1,0 +1,85 @@
+# Sample workflow for building and deploying a Hugo site to GitHub Pages
+# Go to Settings -> Pages -> Build and deployment -> Set the Source to "Github Actions".
+name: Build & Deploy Hugo site to Pages
+
+# Will fire when a new release is published
+on:
+  release:
+    types: [published]
+
+# Change the above to this if you want to build and deploy on every push, but
+# be mindful of overuse. Free accounts have a limited amount of
+# compute time per month.
+# on:
+#   push:
+#     branches:
+#       - main
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  id-token: write
+  pages: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+# Default to bash
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  # Build job
+  build: # name of the job. We are conditioning the next job (deploy) on the succes of this one.
+    runs-on: ubuntu-latest # runner
+    steps:
+    # Checkout the main branch so the action has access to the files
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      # Setup Go. Remember to keep the version up to date with your local build environment
+      - name: Setup Go
+        uses: actions/setup-go@v4
+        with:
+          # renovate: datasource=github-tags depName=golang/go
+          go-version: '1.21.4'
+
+      # Setup Hugo. Remember to keep the version up to date with your local build environment
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          # renovate: datasource=github-releases depName=gohugoio/hugo
+          hugo-version: '0.120.4'
+          extended: true
+      
+      # Build your site and dump the files in ./public
+      - name: Build
+        run: hugo --minify
+
+      # Upload the files outputtet files so the next job can get to them
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./public
+
+  # Deployment job. Now let's deploy the site
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }} # https://<username>.github.io/<repo>
+    runs-on: ubuntu-latest # runner
+    needs: build # only do this if the build was succesfull
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2

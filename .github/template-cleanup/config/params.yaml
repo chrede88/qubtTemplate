@@ -1,0 +1,70 @@
+############################
+## Author
+############################
+
+author:
+  name: %USER%
+  image: author.png
+  greeting: "Your new Qubt site :tada:"
+  icon: ":wave:"
+
+############################
+## Links
+############################
+
+links:
+  - github: https://github.com/%USER%/%NAME%
+  - link: https://github.com/%USER%/%NAME%#readme
+  # - website: 
+  # - x-twitter: 
+  # - mastodon: 
+  # - linkedin: 
+  # - instagram: 
+  # - reddit: 
+  # - telegram: 
+  # - whatsapp: 
+  # - signal: 
+  # - codepen: 
+  # - dev: 
+  # - email: 
+  # - discord: 
+  # - orcid: 
+  # - slack: 
+  # - stack-overflow: 
+  # - twitch: 
+  # - patreon: 
+  # - soundcloud: 
+  # - dribbble: 
+  # - stack-exchange: 
+  # - tiktok: 
+  # - youtube: 
+  # - keybase: 
+  # - flickr: 
+  # - tumblr: 
+  # - kickstarter: 
+  # - snapchat:
+  # - bluesky: 
+  # - bitbucket: 
+  # - bandcamp: 
+  # - etsy: 
+  # - spotify: 
+  # - pinterest: 
+  # - strava: 
+  # - untappd: 
+  # - skype: 
+  # - medium: 
+  # - foursquare: 
+  # - apple: 
+  # - amazon:
+  # - google:
+  # - paypal:
+  # - windows:
+
+###############################
+## OpenGraph & Twitter Cards
+###############################
+
+title: %NAME%
+description: "Site build with Qubt & Hugo"
+images:
+  - thumbnail.png

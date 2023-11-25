@@ -1,0 +1,78 @@
+name: Clean Template
+
+on:
+  # run when branch created (repo generated from template)
+  create:
+
+# only keep latest run of this workflow
+concurrency:
+  group: first-time-setup
+  cancel-in-progress: false
+
+# ADDED THIS CHANGE
+permissions: 
+  actions: write
+  checks: write
+  contents: write
+
+
+jobs:
+  first-time-setup:
+    # ensure run only once, when repo generated
+    if: github.run_number == 1
+
+    runs-on: ubuntu-latest
+
+    steps:
+      # get main branch repo contents
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # remove files not needed for user instance of template
+      - name: Remove unneeded files
+        run: |
+          # Prepare variables
+          NAME="${GITHUB_REPOSITORY##*/}"
+          USER=$GITHUB_REPOSITORY_OWNER
+
+          # update placeholders
+          sed -i "s/%NAME%/$NAME/g" .github/template-cleanup/README.md
+          sed -i "s/%USER%/$USER/g" .github/template-cleanup/README.md
+          sed -i "s/%NAME%/$NAME/g" .github/template-cleanup/config/hugo.yaml
+          sed -i "s/%USER%/$USER/g" .github/template-cleanup/config/hugo.yaml
+          sed -i "s/%NAME%/$NAME/g" .github/template-cleanup/config/params.yaml
+          sed -i "s/%USER%/$USER/g" .github/template-cleanup/config/params.yaml
+          sed -i "s/%NAME%/$NAME/g" .github/template-cleanup/go.mod
+          sed -i "s/%USER%/$USER/g" .github/template-cleanup/go.mod
+          sed -i "s/%NAME%/$NAME/g" .github/template-cleanup/content/about.md
+          sed -i "s/%USER%/$USER/g" .github/template-cleanup/content/about.md
+
+          # replace files
+          cp -R .github/template-cleanup/README.md .
+          cp -R .github/template-cleanup/config/* config/_default/
+          cp -R .github/template-cleanup/go.mod .
+          cp -R .github/template-cleanup/content/* content/
+
+          # move files
+          mv -f .github/workflows/buildDeploy.yaml .github/deploymentWorkflow/buildDeploy.yaml
+
+          # download new author and thumbnail images
+          wget -O assets/author.png https://github.com/$USER.png
+          wget -O assets/thumbnail.png https://github.com/$USER.png
+
+          # remove files
+          rm -rf \
+            .github/ISSUE_TEMPLATE/ \
+            .github/workflows/ \
+            .github/template-cleanup/ \
+            .github/renovate.json \
+            go.sum \
+            LICENSE \
+            assets/author.jpeg \
+            assets/thumbnail.jpeg
+
+      # save changed files
+      - name: Commit changed files
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Setup and populate your repo"

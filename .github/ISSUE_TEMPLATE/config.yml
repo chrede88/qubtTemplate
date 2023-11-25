@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🐛 Issues
+    url: https://github.com/Chrede88/qubt/issues
+    about: Please report issues in the theme repo
