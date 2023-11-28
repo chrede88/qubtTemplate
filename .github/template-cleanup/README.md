@@ -59,7 +59,7 @@ author:
 ############################
 
 links:
-  - github: github: https://github.com/%USER%/%NAME%
+  - github: https://github.com/%USER%/%NAME%
   - link: https://github.com/%USER%/%NAME%#readme
  
 
