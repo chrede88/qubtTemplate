@@ -68,7 +68,7 @@ jobs:
 
       # Upload the files outputtet files so the next job can get to them
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
