@@ -13,11 +13,13 @@ If you're looking for the actual theme repository, follow this [link](https://gi
 git clone https://github.com/<username>/<reponame>
 ```
 5) Change the module name to match your github repo in `go.mod`.
-6) Modify `config/_default/hugo.yaml` and `config/_default/params.yaml` according to the Configuration below.
-7) In a terminal/commandline, move to the newly created folder using `cd`.
-8) Build a local version of your site by executing `hugo server`. You can see the site by navigating to `http://localhost:1313/<YourRepoName>`  (actual URL will be outputted in the CLI) in a browser.
-9) Add a new image to the `assets/` folder, using the same name as you specified in `params.yaml`.
-10) Add a new `icon.png` file to update the favicon. The png file should be 512px by 512px in size.
+6) Modify `config/_default/hugo.yaml`, `config/_default/params.yaml` and `config/_default/menus.yaml` according to the configuration below.
+7) Add your blog posts to `content/blog/`. See example posts for reference.
+8) Modify `content/about.md` so it matches your preferences.
+9) All images are stored in the `assets/` folder. You can group in subfolders if you like.
+10) In a terminal/commandline window, move to the newly created folder using `cd`.
+11) Build a local version of your site by executing `hugo server`. You can see the site by navigating to `localhost:1313` (actual URL will be outputted in the CLI) in a browser.
+12) Add a new `icon.png` file to update the favicon. The png file should be 512px by 512px in size.
 
 ---
 
@@ -27,26 +29,6 @@ git clone https://github.com/<username>/<reponame>
 - Automatic dark mode (based on system setttings).
 - Emoji support for a fun design.
 - Healthcheck endpoint (/healthcheck.json).
-
----
-
-## Installation
-
-1) Use this template by pressing `Use this template`. Don't fork this repository!
-2) Wait 20s-30s and update the page. The files in your repo are getting populated.
-3) Add a LICENSE to your repo.
-4) Clone your version of the template to your local computer:
-```shell
-git clone https://github.com/<username>/<reponame>
-```
-5) Change the module name to match your github repo in `go.mod`.
-6) Modify `config/_default/hugo.yaml`, `config/_default/params.yaml` and `config/_default/menus.yaml` according to the configuration below.
-7) Add your blog posts to `content/blog/`. See example posts for reference.
-8) Modify `content/about.md` so it matches your preferences.
-9) All images are stored in the `assets/` folder. You can group in subfolders if you like.
-10) In a terminal/commandline window, move to the newly created folder using `cd`.
-11) Build a local version of your site by executing `hugo server`. You can see the site by navigating to `localhost:1313` (actual URL will be outputted in the CLI) in a browser.
-12) Add a new `icon.png` file to update the favicon. The png file should be 512px by 512px in size.
 
 ---
 
