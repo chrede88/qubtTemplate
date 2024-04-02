@@ -56,7 +56,7 @@ jobs:
 
       # Setup Hugo. Remember to keep the version up to date with your local build environment
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3
         with:
           # renovate: datasource=github-releases depName=gohugoio/hugo
           hugo-version: '0.124.1'
