@@ -52,7 +52,7 @@ jobs:
         uses: actions/setup-go@v5
         with:
           # renovate: datasource=github-tags depName=golang/go
-          go-version: '1.22.5'
+          go-version: '1.22.6'
 
       # Setup Hugo. Remember to keep the version up to date with your local build environment
       - name: Setup Hugo
