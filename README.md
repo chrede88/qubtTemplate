@@ -120,9 +120,9 @@ The theme version used to build the site is defined in `go.mod` file.
 The best practice is to update to released and tested versions. To update to a specific version execute the following command in a terminal/commandline (at the root path of your site repo):
 
 ```shell
-  hugo mod get github.com/Chrede88/qubt@vX.Y.Z
+  hugo mod get github.com/chrede88/qubt@vX.Y.Z
 ```
-Replace X,Y & Z with the corresponding version numbers. You can find the releases [here](https://github.com/Chrede88/qubt/releases). Please check if any breaking changes are listed under the release you want to update to, before proceeding.
+Replace X,Y & Z with the corresponding version numbers. You can find the releases [here](https://github.com/chrede88/qubt/releases). Please check if any breaking changes are listed under the release you want to update to, before proceeding.
 
 ---
 
