@@ -113,7 +113,7 @@ Users can provide their own icons by placing a `.svg` image in `./assets/icons/`
 
 ## Update the Theme Version
 
-This guide is left here for reference. Please check the [template](https://github.com/Chrede88/qubtTemplate#readme) repo for the most up-to-date documentation.
+This guide is left here for reference. Please check the [template](https://github.com/chrede88/qubtTemplate#readme) repo for the most up-to-date documentation.
 
 The theme version used to build the site is defined in `go.mod` file.
 
