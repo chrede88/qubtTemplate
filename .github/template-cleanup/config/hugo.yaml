@@ -2,7 +2,7 @@
 ## CHANGE THESE
 ############################
 
-baseURL: 'https://%USER%.github.io/%NAME%'
+baseURL: "https://%USER%.github.io/%NAME%"
 title: %NAME%
 
 ############################
@@ -10,7 +10,6 @@ title: %NAME%
 ############################
 
 enableEmoji: true
-disableKinds: ['taxonomy', 'term']
-languageCode: 'en-us'
-
-
+disableKinds: ["taxonomy", "term"]
+languageCode: "en-us"
+enableRobotsTXT: true

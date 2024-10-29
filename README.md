@@ -5,7 +5,7 @@ If you're looking for the actual theme repository, follow this [link](https://gi
 
 ## Installation
 
-1) Use this template by pressing `Use this template`. Don't fork this repository!
+1) Use this template by pressing `Use this template`. **Don't fork this repository!**
 2) Wait 20s-30s and update the page. The files in your repo are getting populated.
 3) Add a LICENSE to your repo.
 4) Clone your version of the template to your local computer:
@@ -17,9 +17,8 @@ git clone https://github.com/<username>/<reponame>
 7) Add your blog posts to `content/blog/`. See example posts for reference.
 8) Modify `content/about.md` so it matches your preferences.
 9) All images are stored in the `assets/` folder. You can group in subfolders if you like.
-10) In a terminal/commandline window, move to the newly created folder using `cd`.
-11) Build a local version of your site by executing `hugo server`. You can see the site by navigating to `localhost:1313` (actual URL will be outputted in the CLI) in a browser.
-12) Add a new `icon.png` file to update the favicon. The png file should be 512px by 512px in size.
+10) Build a local version of your site by executing `hugo server`. You can see the site by navigating to `localhost:1313` (actual URL will be outputted in the CLI) in a browser.
+11) Add a new `icon.png` file to update the favicon. The png file should be 512px by 512px in size.
 
 ---
 
@@ -34,80 +33,7 @@ git clone https://github.com/<username>/<reponame>
 
 ## Configuration
 
-All configuration is done in the four configuration files under `config/_default/`. The URL and site title can be set in `hugo.yaml`. The navbar settings are set in `menus.yaml`. All other parameters are set in `params.yaml`.
-
-`hugo.yaml`:
-```yaml
-baseURL: 'https://username.github.io/qubt'
-title: 'Qubt Theme'
-```
-
-`menus.yaml`:
-```yaml
-main:
-- name: Home
-  url: /
-  weight: 10
-- name: Blog
-  url: /blog/
-  weight: 20
-- name: About
-  url: /about/
-  weight: 30
-```
-
-`params.yaml`:
-```yaml
-############################
-## Author
-############################
-
-author:
-  name: "Qubt"
-  image: author.jpeg
-  greeting: "A personal blog theme for Hugo :evergreen_tree:"
-  icon: ":wave:"
-
-############################
-## Links
-############################
-
-links:
-  - github: https://github.com/username
-  - facebook: https://facebook.com/me
- 
-
-###############################
-## OpenGraph & Twitter Cards
-###############################
-
-title: "Qubt Theme"
-description: "Demo site build with Qubt & Hugo"
-images:
-  - thumbnail.jpeg
-```
-
-Links are defined by the name (i.e. "github" or "facebook"). The names must match one of the supported link icons, see list below.
-
-### Supported Social Icons
-| **Supported Icons** | **Supported Icons** | **Supported Icons** | **Supported Icons** |
-| --- | --- | --- | --- |
-| amazon | apple | bandcamp | bitbucket | 
-| bluesky | check-mark | codepen | dev |
-| discord | dribbble | email | etsy |
-| facebook | flickr | foursquare | github |
-| gitlab | google | instagram | keybase |
-| kickstarter | link | linkedin | mastodon |
-| medium | orcid | patreon | paypal | pinterest |
-| reddit | signal | skype | slack |
-| snapchat | soundcloud | spotify | stack-exchange |
-| stack-overflow | strava | telegram | tiktok |
-| tumblr | twitch | untappd | website |
-| whatsapp | windows | x-twitter | youtube |
-
-
-### Custom Social Icons
-Users can provide their own icons by placing a `.svg` image in `./assets/icons/` in their own repo. Creating folders when necessary. The image should be as circular as possible for the best result. Don't use spaces in the filename! Find all current icons [here](https://github.com/chrede88/qubt/tree/main/assets/icons).
+See the [wiki](https://github.com/chrede88/qubt/wiki) for all info about configuration.
 
 ---
 
@@ -127,7 +53,7 @@ Replace X,Y & Z with the corresponding version numbers. You can find the release
 ---
 
 ## Deploy on Github Pages
-You can very easily deploy your site using Github Pages. Included in this template is a Github Action workflow that will build and deploy your site to Github Pages automatically:+1:
+You can very easily deploy your site using Github Pages. Included in this template is a Github Action workflow that will build and deploy your site to Github Pages automatically :+1:
 
 You can find the workflow here `.github/deploymentWorkflow/buildDeploy.yml`. To use this, move it to `.github/workflows/`.
 
