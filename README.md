@@ -38,9 +38,6 @@ See the [wiki](https://github.com/chrede88/qubt/wiki) for all info about configu
 ---
 
 ## Update the Theme Version
-
-This guide is left here for reference. Please check the [template](https://github.com/chrede88/qubtTemplate#readme) repo for the most up-to-date documentation.
-
 The theme version used to build the site is defined in `go.mod` file.
 
 The best practice is to update to released and tested versions. To update to a specific version execute the following command in a terminal/commandline (at the root path of your site repo):
@@ -49,21 +46,3 @@ The best practice is to update to released and tested versions. To update to a s
   hugo mod get github.com/chrede88/qubt@vX.Y.Z
 ```
 Replace X,Y & Z with the corresponding version numbers. You can find the releases [here](https://github.com/chrede88/qubt/releases). Please check if any breaking changes are listed under the release you want to update to, before proceeding.
-
----
-
-## Deploy on Github Pages
-You can very easily deploy your site using Github Pages. Included in this template is a Github Action workflow that will build and deploy your site to Github Pages automatically :+1:
-
-You can find the workflow here `.github/deploymentWorkflow/buildDeploy.yml`. To use this, move it to `.github/workflows/`.
-
-The workflow is already set up and ready to go, but go through it and spend some time to understand what's going on. Otherwise, it'll always be this black box of magic that you can't fix when it breaks!
-
-Last step: Go to Settings -> Pages -> Build and deployment -> Set the Source to "Github Actions".
-
-Next time you publish a release this workflow will build and deploy your site :tada:
-
-Your site will be published to the following URL:
-`https://<username>.github.io/<repo>`, where `<username>` and `<repo>` is your Github username and the name of your repository.
-
-
