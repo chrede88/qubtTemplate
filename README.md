@@ -33,7 +33,7 @@ git clone https://github.com/<username>/<reponame>
 
 ## Configuration
 
-See the [wiki](https://github.com/chrede88/qubt/wiki) for all info about configuration.
+See the [wiki](https://github.com/chrede88/qubt/wiki) for all info about configuration and how to easily deploy to Github Pages.
 
 ---
 
