@@ -1,8 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
-  ],
+  "extends": ["config:recommended"],
   "dependencyDashboardTitle": "Renovate Dashboard 🤖",
   "commitMessagePrefix": "🤖",
   "commitMessageTopic": "{{depName}}",
@@ -17,7 +15,9 @@
       "description": "Update Hugo/Go version in Github actions",
       "customType": "regex",
       "fileMatch": ["^.github/(?:workflows|actions)/.+\\.ya?ml$"],
-      "matchStrings": ["datasource=(?<datasource>.*?) depName=(?<depName>.*?)\n.*?'(?<currentValue>.*)'\n"],
+      "matchStrings": [
+        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)\n.*?'(?<currentValue>.*)'\n"
+      ],
       "versioningTemplate": "semver-coerced",
       "extractVersionTemplate": "^(v|go)?(?<version>.*)$"
     }
@@ -27,6 +27,10 @@
       "matchManagers": ["gomod"],
       "matchDepTypes": ["indirect"],
       "enabled": true
+    },
+    {
+      "matchDatasources": ["golang-version"],
+      "rangeStrategy": "bump"
     }
   ]
 }
