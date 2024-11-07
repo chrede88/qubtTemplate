@@ -10,18 +10,17 @@ concurrency:
   cancel-in-progress: false
 
 # ADDED THIS CHANGE
-permissions: 
+permissions:
   actions: write
   checks: write
   contents: write
-
 
 jobs:
   first-time-setup:
     # ensure run only once, when repo generated
     if: github.run_number == 1
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       # get main branch repo contents
