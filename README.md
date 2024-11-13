@@ -6,7 +6,7 @@ If you're looking for the actual theme repository, follow this [link](https://gi
 ## Installation
 
 1) Use this template by pressing `Use this template`. **Don't fork this repository!**
-2) Wait 20s-30s and update the page. The files in your repo are getting populated.
+2) Wait 20s-30s and update the page. The `Clean Template` workflow will run automatically, creating/poplutating files based on your Github user.
 3) Add a LICENSE to your repo.
 4) Clone your version of the template to your local computer:
 ```shell
