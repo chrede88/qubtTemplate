@@ -59,7 +59,7 @@ jobs:
         uses: peaceiris/actions-hugo@v3
         with:
           # renovate: datasource=github-releases depName=gohugoio/hugo
-          hugo-version: '0.143.1'
+          hugo-version: '0.144.0'
           extended: true
 
       # Build your site and dump the files in ./public
