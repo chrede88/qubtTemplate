@@ -22,3 +22,4 @@ github.com/chrede88/qubt v1.5.0/go.mod h1:5rVoQlcu2HIT7+/4xWFBX7nMQGgfqSabqGVZV5
 github.com/chrede88/qubt/v2 v2.0.0 h1:zEoudQzWET1d12M3SVSJ4wyzUaFAiNai4FealmPupLk=
 github.com/chrede88/qubt/v2 v2.0.0/go.mod h1:UPYy703sTbPLp7/1BoDPiNZ/a64/zgRBfM2uVlhuswQ=
 github.com/chrede88/qubt/v2 v2.0.1/go.mod h1:UPYy703sTbPLp7/1BoDPiNZ/a64/zgRBfM2uVlhuswQ=
+github.com/chrede88/qubt/v2 v2.1.0/go.mod h1:jXy2xsoEIjeslLLyIxyhQOxtPOXETQGpbPtAEmp5r9s=
