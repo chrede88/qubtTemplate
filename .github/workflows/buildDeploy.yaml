@@ -49,14 +49,14 @@ jobs:
 
       # Setup Go. Remember to keep the version up to date with your local build environment
       - name: Setup Go
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v5.0.0
         with:
           # renovate: datasource=github-tags depName=golang/go
           go-version: '1.24.6'
 
       # Setup Hugo. Remember to keep the version up to date with your local build environment
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
+        uses: peaceiris/actions-hugo@v3.0.0
         with:
           # renovate: datasource=github-releases depName=gohugoio/hugo
           hugo-version: '0.148.2'
@@ -68,7 +68,7 @@ jobs:
 
       # Upload the files outputtet files so the next job can get to them
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v3.0.1
         with:
           path: ./public
 
@@ -82,4 +82,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4.0.5
