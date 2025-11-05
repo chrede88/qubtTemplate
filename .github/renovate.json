@@ -1,8 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
-  ],
+  "extends": ["config:recommended"],
   "dependencyDashboardTitle": "Renovate Dashboard 🤖",
   "commitMessagePrefix": "🤖",
   "commitMessageTopic": "{{depName}}",
@@ -10,17 +8,13 @@
   "commitMessageSuffix": "",
   "prConcurrentLimit": 0,
   "prHourlyLimit": 0,
-  "reviewers": [
-    "chrede88"
-  ],
+  "reviewers": ["chrede88"],
   "timezone": "Europe/Zurich",
   "customManagers": [
     {
       "description": "Update Hugo/Go version in Github actions",
       "customType": "regex",
-      "managerFilePatterns": [
-        "/^.github/(?:workflows|actions)/.+\\.ya?ml$/"
-      ],
+      "managerFilePatterns": ["/^.github/(?:workflows|actions)/.+\\.ya?ml$/"],
       "matchStrings": [
         "datasource=(?<datasource>.*?) depName=(?<depName>.*?)\n.*?'(?<currentValue>.*)'\n"
       ],
@@ -30,19 +24,24 @@
   ],
   "packageRules": [
     {
-      "matchManagers": [
-        "gomod"
-      ],
-      "matchDepTypes": [
-        "indirect"
-      ],
+      "matchManagers": ["gomod"],
+      "matchDepTypes": ["indirect"],
       "enabled": true
     },
     {
-      "matchDatasources": [
-        "golang-version"
-      ],
+      "matchDatasources": ["golang-version"],
       "rangeStrategy": "bump"
+    },
+    {
+      "description": ["Go Group"],
+      "groupName": "Go",
+      "matchPackageNames": ["/go/", "/golang/"],
+      "matchDatasources": ["github-tags", "golang-version"],
+      "group": {
+        "commitMessageTopic": "{{{groupName}}} group"
+      },
+      "separateMinorPatch": true,
+      "minimumGroupSize": 2
     }
   ]
 }
