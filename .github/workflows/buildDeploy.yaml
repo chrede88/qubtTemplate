@@ -49,7 +49,7 @@ jobs:
 
       # Setup Go. Remember to keep the version up to date with your local build environment
       - name: Setup Go
-        uses: actions/setup-go@v6.0.0
+        uses: actions/setup-go@v6.1.0
         with:
           # renovate: datasource=github-tags depName=golang/go
           go-version: '1.25.4'
