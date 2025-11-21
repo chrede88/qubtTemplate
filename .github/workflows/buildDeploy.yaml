@@ -42,7 +42,7 @@ jobs:
     steps:
       # Checkout the main branch so the action has access to the files
       - name: Checkout
-        uses: actions/checkout@v5.0.1
+        uses: actions/checkout@v6.0.0
         with:
           submodules: true
           fetch-depth: 0
