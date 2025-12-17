@@ -72,6 +72,6 @@ jobs:
 
       # save changed files
       - name: Commit changed files
-        uses: stefanzweifel/git-auto-commit-action@v7.0.0
+        uses: stefanzweifel/git-auto-commit-action@v7.1.0
         with:
           commit_message: 'Setup and populate your repo'
