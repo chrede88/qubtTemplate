@@ -19,7 +19,7 @@ jobs:
   first-time-setup:
     # ensure run only once, when repo generated
     if: github.run_number == 1
-
+    timeout-minutes: 10
     runs-on: ubuntu-24.04
 
     steps:
