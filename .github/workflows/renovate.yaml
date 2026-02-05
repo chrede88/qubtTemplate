@@ -4,12 +4,12 @@ name: 'Renovate'
 on:
   workflow_dispatch:
 
-  schedule:
-    - cron: '4 * * * *' # Every hour (4min after the hour)
-  push:
-    branches: ['main']
-    paths:
-      - .github/renovate.json
+  # schedule:
+  #   - cron: '4 * * * *' # Every hour (4min after the hour)
+  # push:
+  #   branches: ['main']
+  #   paths:
+  #     - .github/renovate.json
 
 permissions:
   packages: read
