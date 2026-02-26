@@ -50,7 +50,7 @@ jobs:
 
       # Setup Go. Remember to keep the version up to date with your local build environment
       - name: Setup Go
-        uses: actions/setup-go@v6.2.0
+        uses: actions/setup-go@v6.3.0
         with:
           go-version: '1.26.0'
 
