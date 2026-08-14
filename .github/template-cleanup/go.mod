@@ -1,5 +1,5 @@
 module github.com/%USER%/%NAME%
 
-go 1.26.5
+go 1.26.6
 
 require github.com/chrede88/qubt/v3 v3.0.1 // indirect
