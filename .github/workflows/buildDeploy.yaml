@@ -38,7 +38,7 @@ defaults:
 jobs:
   # Build job
   build: # name of the job. We are conditioning the next job (deploy) on the succes of this one.
-    runs-on: ubuntu-24.04 # runner
+    runs-on: ubuntu-26.04 # runner
     timeout-minutes: 10
     steps:
       # Checkout the main branch so the action has access to the files
@@ -77,7 +77,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }} # https://<username>.github.io/<repo>
-    runs-on: ubuntu-24.04 # runner
+    runs-on: ubuntu-26.04 # runner
     timeout-minutes: 10
     needs: build # only do this if the build was succesfull
     steps:
