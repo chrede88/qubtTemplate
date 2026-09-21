@@ -11,5 +11,5 @@ title: %NAME%
 
 enableEmoji: true
 disableKinds: ["taxonomy", "term"]
-languageCode: "en-us"
+locale: "en-us"
 enableRobotsTXT: true
